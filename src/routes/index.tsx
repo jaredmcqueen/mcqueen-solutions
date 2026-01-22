@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Box, Brain, Cloud, Code, Network, Shield } from "lucide-react";
+import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import {
 	Card,
@@ -7,8 +9,6 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import Header from "@/components/Header";
-import { Code, Brain, Cloud, Shield, Network, Box } from "lucide-react";
 
 export const Route = createFileRoute("/")({ component: HomePage });
 
@@ -62,10 +62,10 @@ function HeroSection() {
 						Innovative Solutions for Data Science
 					</h1>
 					<p className="text-gray-300 text-lg leading-relaxed">
-						McQueen Solutions provides enhanced mission capabilities for Intelligence
-						Community and DoD customers through our innovative IT solutions, engineering
-						industry expertise, and commitment to delivering high-quality products and
-						services.
+						McQueen Solutions provides enhanced mission capabilities for
+						Intelligence Community and DoD customers through our innovative IT
+						solutions, engineering industry expertise, and commitment to
+						delivering high-quality products and services.
 					</p>
 				</div>
 
@@ -137,13 +137,16 @@ function CloudEngineeringSection() {
 			<div className="container mx-auto px-6">
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<div>
-						<h2 className="text-3xl font-bold text-gray-900 mb-6">Cloud Engineering</h2>
+						<h2 className="text-3xl font-bold text-gray-900 mb-6">
+							Cloud Engineering
+						</h2>
 						<p className="text-gray-600 leading-relaxed">
-							We understand that the cloud is the backbone of modern-day businesses,
-							and our cloud engineering services are designed to help our clients take full
-							advantage of its benefits. Our team of certified cloud engineers possesses a
-							wealth of experience in developing, deploying, and managing cloud solutions
-							on all major cloud platforms, including AWS, Azure, and Google Cloud and
+							We understand that the cloud is the backbone of modern-day
+							businesses, and our cloud engineering services are designed to
+							help our clients take full advantage of its benefits. Our team of
+							certified cloud engineers possesses a wealth of experience in
+							developing, deploying, and managing cloud solutions on all major
+							cloud platforms, including AWS, Azure, and Google Cloud and
 							Kubernetes public / private clouds.
 						</p>
 					</div>
@@ -165,15 +168,18 @@ function CyberSecuritySection() {
 						<ServiceIllustration variant="security" />
 					</div>
 					<div className="order-1 md:order-2">
-						<h2 className="text-3xl font-bold text-gray-900 mb-6">Cyber Security</h2>
+						<h2 className="text-3xl font-bold text-gray-900 mb-6">
+							Cyber Security
+						</h2>
 						<p className="text-gray-600 leading-relaxed">
-							Our team understands the critical role that security plays in safeguarding
-							sensitive data and protecting against cyber threats. We incorporate security
-							best practices into every stage of our software development lifecycle, from
-							design to deployment. Our team of experts employs a wide range of security
-							measures, including secure coding practices, encryption, access controls,
-							network security, and more, to ensure that our clients' systems are protected
-							against potential threats.
+							Our team understands the critical role that security plays in
+							safeguarding sensitive data and protecting against cyber threats.
+							We incorporate security best practices into every stage of our
+							software development lifecycle, from design to deployment. Our
+							team of experts employs a wide range of security measures,
+							including secure coding practices, encryption, access controls,
+							network security, and more, to ensure that our clients' systems
+							are protected against potential threats.
 						</p>
 					</div>
 				</div>
@@ -190,13 +196,14 @@ function DevSecOpsSection() {
 					<div>
 						<h2 className="text-3xl font-bold text-gray-900 mb-6">DevSecOps</h2>
 						<p className="text-gray-600 leading-relaxed">
-							We specialize in building scalable architectures that are designed to meet the
-							unique needs of our customers. We leverage cloud-based technologies and
-							DevOps practices to create highly available and fault-tolerant systems that
-							can scale to handle massive amounts of data and traffic. Our team of
-							experienced engineers are experts in containerization, microservices, and
-							distributed systems, ensuring that our architectures are not only scalable, but
-							also highly efficient and easy to manage.
+							We specialize in building scalable architectures that are designed
+							to meet the unique needs of our customers. We leverage cloud-based
+							technologies and DevOps practices to create highly available and
+							fault-tolerant systems that can scale to handle massive amounts of
+							data and traffic. Our team of experienced engineers are experts in
+							containerization, microservices, and distributed systems, ensuring
+							that our architectures are not only scalable, but also highly
+							efficient and easy to manage.
 						</p>
 					</div>
 					<div className="flex justify-center">
@@ -217,16 +224,19 @@ function TacticalEdgeSection() {
 						<ServiceIllustration variant="tactical" />
 					</div>
 					<div className="order-1 md:order-2">
-						<h2 className="text-3xl font-bold text-gray-900 mb-6">Tactical Edge</h2>
+						<h2 className="text-3xl font-bold text-gray-900 mb-6">
+							Tactical Edge
+						</h2>
 						<p className="text-gray-600 leading-relaxed">
-							Delivering mission capabilities in real-time containerized environments is
-							important to our mission partners. We leverage private cloud platforms,
-							including Kubernetes, to create solutions that can operate at the tactical edge.
-							Our team has a deep understanding of Kubernetes and how it can be used
-							to deploy and manage containerized workloads in edge environments. By
-							leveraging these technologies, we can provide our clients with reliable, scalable, and
-							secure solutions that can operate in remote, disconnected, and low-
-							bandwidth environments.
+							Delivering mission capabilities in real-time containerized
+							environments is important to our mission partners. We leverage
+							private cloud platforms, including Kubernetes, to create solutions
+							that can operate at the tactical edge. Our team has a deep
+							understanding of Kubernetes and how it can be used to deploy and
+							manage containerized workloads in edge environments. By leveraging
+							these technologies, we can provide our clients with reliable,
+							scalable, and secure solutions that can operate in remote,
+							disconnected, and low- bandwidth environments.
 						</p>
 					</div>
 				</div>
@@ -235,7 +245,11 @@ function TacticalEdgeSection() {
 	);
 }
 
-function ServiceIllustration({ variant }: { variant: "cloud" | "security" | "devops" | "tactical" }) {
+function ServiceIllustration({
+	variant,
+}: {
+	variant: "cloud" | "security" | "devops" | "tactical";
+}) {
 	const iconMap = {
 		cloud: <Cloud className="size-24 text-mcqueen-red" />,
 		security: <Shield className="size-24 text-mcqueen-red" />,
@@ -285,7 +299,9 @@ function ServicesGridSection() {
 					{services.map((service) => (
 						<Card key={service.title} className="border-gray-200">
 							<CardHeader>
-								<CardTitle className="text-xl text-gray-900">{service.title}</CardTitle>
+								<CardTitle className="text-xl text-gray-900">
+									{service.title}
+								</CardTitle>
 							</CardHeader>
 							<CardContent className="space-y-4">
 								<CardDescription className="text-gray-600 leading-relaxed">
@@ -330,7 +346,8 @@ function PartnerSection() {
 					Partner with McQueen Solutions
 				</h2>
 				<p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-					We're always looking for new and innovative ways to collaborate and help our clients achieve their goals.
+					We're always looking for new and innovative ways to collaborate and
+					help our clients achieve their goals.
 				</p>
 				<Button className="bg-mcqueen-red hover:bg-mcqueen-red/90 text-white">
 					Contact Us
@@ -354,7 +371,8 @@ function Footer() {
 						</a>
 					</div>
 					<p className="text-gray-500 text-sm">
-						© 2025 · McQueen Solutions. All rights reserved.
+						© {new Date().getFullYear()} · McQueen Solutions. All rights
+						reserved.
 					</p>
 				</div>
 			</div>
