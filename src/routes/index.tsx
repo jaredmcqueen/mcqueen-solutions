@@ -20,9 +20,6 @@ function HomePage() {
 			{/* Hero Section */}
 			<HeroSection />
 
-			{/* Join Our Team Section */}
-			<JoinTeamSection />
-
 			{/* Cloud Engineering Section */}
 			<CloudEngineeringSection />
 
@@ -115,19 +112,6 @@ function FeatureCard({
 				</CardDescription>
 			</CardContent>
 		</Card>
-	);
-}
-
-function JoinTeamSection() {
-	return (
-		<section className="bg-gray-100 py-16">
-			<div className="container mx-auto px-6 text-center">
-				<h2 className="text-3xl font-bold text-gray-900 mb-6">Join Our Team</h2>
-				<Button className="bg-mcqueen-red hover:bg-mcqueen-red/90 text-white">
-					Apply
-				</Button>
-			</div>
-		</section>
 	);
 }
 
